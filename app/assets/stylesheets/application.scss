@@ -50,10 +50,7 @@
 }
 // for home index mask with video
 
-@font-face {
-  font-family: Biko;
-  src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
-}
+
 body {
   background: white;
   margin: 2rem;
@@ -68,39 +65,3 @@ header {
   max-width: 1200px;
 }
 header video { width: 100%; }
-svg { 
-  width: 100%;
-  position:absolute;
-  top: 0;
-  left: 0; // needed for FF, Safari, Edge
-  height: 100%;
-}
-svg text, h1 {
-  font-family: Biko, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 38px;
-}
-svg rect {
-  fill: white;
-}
-svg > rect {
-    -webkit-mask: url(#mask);
-    mask: url(#mask);
-}
-.red{
-  color:red;
-}
-.middle{
-  width:100%;
-  position:absolute;
-  top:50%;
-  justify-content: center;
-  text-align: center;
-  @media (max-width: 500px) {
-    margin-left:-30px;
-  }
-
-// end of home mask with video-----
-  
-}
