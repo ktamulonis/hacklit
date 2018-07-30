@@ -47,6 +47,7 @@
 // @import 'sections/profile_page';
 .navbar{
 	background-color:transparent;
+  border-color:transparent;
 }
 // for home index mask with video
 
@@ -104,4 +105,7 @@ header video {
 }
  a:hover{
   text-decoration:none;
+}
+.logo-small{
+  width:40px;
 }
