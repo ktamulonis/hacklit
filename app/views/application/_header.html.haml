@@ -7,4 +7,5 @@
     = nav class: 'navbar-right' do
       = link_to 'Privacy', ""
       = link_to 'About', ""
-      = render partial: "application/account_dropdown"
+      -if current_user
+        = render partial: "application/account_dropdown"
