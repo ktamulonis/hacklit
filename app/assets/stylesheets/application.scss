@@ -57,6 +57,7 @@ body {
 }
 #above_the_fold{
   height: 130vh;
+  background-color:white;
 }
 
 header { 
@@ -101,6 +102,6 @@ header video {
 #sign_up{
 	height:30vh;
 }
-#sign_up a:hover{
+ a:hover{
   text-decoration:none;
 }
