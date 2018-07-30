@@ -1,15 +1,21 @@
-#above_the_fold
-  %header
-    %video{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :poster=>'https://s3.amazonaws.com/hackliteracy/hacklit1.png'}
-      %source{:src => "https://s3.amazonaws.com/hackliteracy/hacklit.mp4"}
-
-    -if !current_user 
-      #start_here  
-        = link_to user_github_omniauth_authorize_path do
-          #sign_up.flex
-            %h1.white START
-            
-            %i.fab.fa-github.fa-7x.red
-            %h1.white HERE           
+%header
+  %video{:autoplay => "", :loop => "", :muted => "", :playsinline => ""}
+    %source{:src => "https://s3.amazonaws.com/hackliteracy/randomcode.mp4"}
+  %svg{:preserveaspectratio => "xMidYMid slice", :viewbox => "0 0 285 80", :xmlns => "http://www.w3.org/2000/svg"}
+    %defs
+      %mask#mask{:height => "100%", :width => "100%", :x => "0", :y => "0"}
+        %rect{:height => "100%", :width => "100%", :x => "0", :y => "0"}
+        %text{:x => "92", :y => "50"} HACK
+    %rect{:height => "100%", :width => "100%", :x => "0", :y => "0"}
+  .red.middle 
+    %h1 Literacy
+  
+-if !current_user 
+  #start_here  
+    = link_to user_github_omniauth_authorize_path do
+      #sign_up.flex
+        %h1.white START 
+        %i.fab.fa-github.fa-7x.red
+        %h1.white HERE           
          
 

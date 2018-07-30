@@ -53,7 +53,7 @@
 
 
 body {
-  background: black;
+  background: white;
   margin:0;
 }
 #above_the_fold{
@@ -61,17 +61,6 @@ body {
   background-color:white;
 }
 
-header { 
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:0;
- 
-}
-
-header video { 
-  width: 100%; 
-}
 .flex {
   display: flex;
   justify-content: center;
@@ -106,15 +95,62 @@ header video {
  a:hover{
   text-decoration:none;
 }
-.logo-small{
-  width:40px;
-}
+
 .red{
   color:red;
 }
+
 .white{
   color:white;
 }
 #start_here{
   background-color:black;
+}
+
+//---Mask---
+@font-face {
+  font-family: Biko;
+  src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
+}
+header { 
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+}
+header video { width: 100%; }
+header svg { 
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0; // needed for FF, Safari, Edge
+  height: 100%;
+}
+svg text, h1 {
+  font-family: Biko, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 38px;
+}
+svg rect {
+  fill: white;
+}
+svg > rect {
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}
+.red{
+  color:red;
+}
+.middle{
+  width:100%;
+  position:absolute;
+  top:50%;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 500px) {
+    margin-left:-40px;
+    top:40%;
+  }
+  
 }
