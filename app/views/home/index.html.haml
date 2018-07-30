@@ -1,5 +1,10 @@
 #above_the_fold
   %header
-    %video{:autoplay => "", :loop => "", :muted => "", :playsinline => ""}
+    %video{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :poster=>'https://s3.amazonaws.com/hackliteracy/hacklit1.png'}
       %source{:src => "https://s3.amazonaws.com/hackliteracy/hacklit.mp4"}
-
+    -if !current_user
+      = link_to new_user_registration_path do
+        #sign_up.flex.colors
+          %h1 START
+          %i.fab.fa-github.fa-7x
+          %h1 HERE

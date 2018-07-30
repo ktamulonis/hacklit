@@ -52,16 +52,55 @@
 
 
 body {
-  background: white;
-  margin: 2rem;
+  background: black;
+  margin:0;
 }
 #above_the_fold{
-  height: 100vh;
+  height: 130vh;
 }
+
 header { 
   width: 100%;
   margin: 0 auto;
-  position: relative;
-  max-width: 1200px;
+  position: absolute;
+  top:0;
+ 
 }
-header video { width: 100%; }
+
+header video { 
+  width: 100%; 
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.colors{
+      animation: colorchange 50s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {color:rgba(255, 255, 255, .8);}
+      25%  {color:rgba(41, 40, 191, 0.8);}
+      50%  {color:rgba(255, 255, 255, .8);}
+      75%  {color: rgba(21, 200, 4, 0.8);}
+      100% {color:rgba(54, 183, 255, 0.8);}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {color:rgba(255, 255, 255, .8);}
+      25%  {color:rgba(41, 40, 191, 0.8);}
+      50%  {color:rgba(255, 255, 255, .8);}
+      75%  {color: rgba(21, 200, 4, 0.8);}
+      100% {color:rgba(54, 183, 255, 0.8);}
+    }
+#sign_up{
+	height:30vh;
+}
+#sign_up a:hover{
+  text-decoration:none;
+}
